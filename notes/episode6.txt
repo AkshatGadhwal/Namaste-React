@@ -1,0 +1,12 @@
+1. monolith and microservice architechture 
+
+2. We call the api in the useEffect to show the data in 2nd render. In short we use the approach of render->fetch->render
+
+3. useEffect(()=> fetchData(),[])
+
+4. shimar ui
+
+5. React re-render the whole componenet but update only things which are changed. This algorithm is called React-Fiber or concialation. 
+
+6. useEffect runs after the first rendering the component 
+

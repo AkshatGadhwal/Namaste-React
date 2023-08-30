@@ -1,0 +1,105 @@
+different actions for the different functions 
+Actions-Middleware-Reducers ( middleware in epics files, will handle api call, redux-observalble library)
+
+
+
+22/07/23
+Place Order Widget SPOT PAGE
+LIMIT ORDER
+1. colour of buy sell button on disabling
+2. Order book buy table is not scrolled to bottum instantly
+3. buttons to select the the % quantity are not working on sigle clikc ( have to click twice )
+4. I entered the quantity. Now I want to select a different price from the table, the quantity is also overwritten to zero when I click on order table row.
+
+
+MARKET ORDER
+5. value in USD is not showing in the USD toggle field
+
+
+
+Binance-test
+under value: working fine 
+over value: not capping the quantity 
+more/less price: working fine
+-/sell
+
+Deribit testing
+1. when the volume is zero, plan order is showing 0.0001
+2. the price in USD is not shown when the usd toggle is off 
+3. showing slight different valus in order book and plan order ( 0.07 in order book and 0.0666 in plan order)
+4. minimum volume shown by plan order is 0.0001
+
+okx_new_test 
+1. plan order is showing 4 digits after the decimal while 5 digits after the decimal is shown in the order book
+2. two plan order calls when changing volume/quantity in place order 
+
+
+heading need to be changed to ai/ml 
+
+case capital 
+
+ui/ux click on npl sentiment -> back paddle?
+auro sentiment in the decimal
+
+main nlp sentiment page:
+bad formating
+little circle with q 
+top bar with 
+second bar?
+
+
+under quantity: working fine 
+different price: working fine
+over quantity: working fine ( not caping) 
+mid quantity: workinng fine 
+
+
+binance_testing + okx_new_test
+
+SELL 
+1. quantity is not changing in the input field when we click on the orderbook row but it is passing as zero in api payload
+
+1. under quantity: sometimes not working as expected. not selecting the exchange from top row 
+
+price for okx_new_test: 0.63620
+price for binance-test: 0.63608
+
+2. mid quantity: not spliting as expected 
+
+
+2. over value: its capping 
+
+
+2. difference in price in order book and in plan order response, three digits after the decimal
+
+BUY:
+
+under quantity: fine 
+mid quantity: same problem ( not spliting with exact accuracy)
+over quantity: caping 
+
+binance_test + Deribit_testing
+
+no binance_test in sell side order book
+no Deribit testing in buy side
+
+SELL 
+under quantity: fine 
+mid quantity: not enough data 
+over quantity: fine ( caping )
+price change: fine 
+
+BUY:
+under quantity: fine 
+over quantity: fine ( caping )
+price change: fine
+
+Deribit_testing + okx_new_test
+no okx_new_test in sell side ( but it was in the binance+okx)
+
+
+
+
+
+29/07/2023
+1. subscribe_pair ( order book ) and subscribe_tickers ( best bid ask ) sending the data after 5 seconds interval

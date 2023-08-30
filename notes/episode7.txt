@@ -1,0 +1,2 @@
+1. ReactRoutes 
+2. keep the state variables on top and don't declare a state variable inside a condition

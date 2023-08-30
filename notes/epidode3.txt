@@ -1,0 +1,4 @@
+1. npx parcel index.html
+it tell the npx to run the parcel command and give the index.html as the source file 
+
+2. 
