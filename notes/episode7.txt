@@ -1,2 +1,11 @@
 1. ReactRoutes 
 2. keep the state variables on top and don't declare a state variable inside a condition
+3. Children Routes 
+4. Single Page Applications: because React uses only one page and changes the components via client side routing 
+
+# Client side and server side routing
+
+# Dynamic Routes
+
+# How to pass propes in the React Routes
+
