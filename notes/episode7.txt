@@ -9,3 +9,11 @@
 
 # How to pass propes in the React Routes
 
+# interesting Fact about async await 
+
+- a async function runs in parallel to the main loop, the line next to the async function does not wait for the async function to finish it's instruction rather start executing in parallel to the async function 
+
+- if do not use await before any statement in async then that would be same as any other function. The await keyword tells to wait for the statement to execute, it's like waiting for promise to return. 
+
+- if you change the state in a function then this set state will take effect only after the execution of the whole function is finished
+
