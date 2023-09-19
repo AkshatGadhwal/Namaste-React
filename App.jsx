@@ -3,11 +3,11 @@ import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom';
 
 import './App.css';
 
-import { Home } from './components/Home';
-import { About } from './components/About';
-import { Error } from './components/Error';
-import { Restaurant } from './components/Restaurant';
-import Header from './components/Header';
+import { Home } from '/src/components/Home';
+import { About } from '/src/components/About';
+import { Error } from '/src/components/Error';
+import { Restaurant } from '/src/components/Restaurant';
+import Header from '/src/components/Header';
 
 const AppLayout = () => {
     return (

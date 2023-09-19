@@ -1,27 +1,11 @@
-
-
 import React, {useEffect, useState} from 'react'
 import { useParams } from 'react-router-dom'
-import { RESTAURANT_DETAILS_URL } from '../utils/constants';
+import { useRestaurant } from '../utils/useRestaurant';
 
 
 export const Restaurant = () => {
     const {resId} = useParams();
-    const [restaurant, setRestaurant] = useState(null);
-
-    const fetchData = async () => {
-        try {
-            const res = await fetch(RESTAURANT_DETAILS_URL + resId);
-            const data = await res.json();
-            setRestaurant(data?.data);
-        } catch (error) {
-            console.log(error);
-        }
-    }
-
-    useEffect( () => {
-        fetchData();
-    },[])
+    const restaurant = useRestaurant(resId);
 
     if(!restaurant){
         return <div>Loading...</div>
@@ -29,7 +13,6 @@ export const Restaurant = () => {
 
     const { name, cuisines, costForTwoMessage } =
     restaurant?.cards[0]?.card?.card?.info;
-
     const { itemCards } =
     restaurant?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card;
 
@@ -50,6 +33,5 @@ export const Restaurant = () => {
                 }
             </ul>
         </div>
-
     )
 }
