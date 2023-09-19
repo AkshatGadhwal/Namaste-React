@@ -27,8 +27,6 @@ export const Restaurant = () => {
         return <div>Loading...</div>
     }
 
-    console.log(restaurant);
-
     const { name, cuisines, costForTwoMessage } =
     restaurant?.cards[0]?.card?.card?.info;
 
