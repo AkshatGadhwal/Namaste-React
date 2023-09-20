@@ -6,6 +6,10 @@ const RestaurantList = () => {
 
     const [restaurants, setRestaurants] = useState([]);
 
+    useEffect(() => {
+        fetchData();
+    }, []);
+
     const fetchData = async () => {
         try {
             const res = await fetch(RESTAURANT_LIST_URL);
@@ -18,10 +22,6 @@ const RestaurantList = () => {
             console.log(error);
         }
     }
-
-    useEffect(() => {
-        fetchData();
-    }, []);
 
     return (
         <div>
@@ -43,7 +43,7 @@ const RestaurantList = () => {
                         }
                     </ul>
                 ) : (
-                    <div>No Restaurants</div>
+                    <div>Loading...</div>
                 )
             }
         </div>

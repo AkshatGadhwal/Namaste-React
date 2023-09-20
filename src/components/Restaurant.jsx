@@ -5,9 +5,9 @@ import { useRestaurant } from '../utils/useRestaurant';
 
 export const Restaurant = () => {
     const {resId} = useParams();
-    const restaurant = useRestaurant(resId);
+    const {restaurant,loading} = useRestaurant(resId);
 
-    if(!restaurant){
+    if(loading){
         return <div>Loading...</div>
     }
 
