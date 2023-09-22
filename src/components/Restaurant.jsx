@@ -18,9 +18,9 @@ export const Restaurant = () => {
 
     return (
         <div>
-            <h1>{name}</h1>
-            <h2>{cuisines.join(', ')}</h2>
-            <h2>{costForTwoMessage}</h2>
+            <h2 style={{color:'blue'}}>{name}</h2>
+            <h3>{cuisines.join(', ')}</h3>
+            <h3>{costForTwoMessage}</h3>
             <h4>Menu:</h4>
             <ul>
                 {

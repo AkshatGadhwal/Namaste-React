@@ -1,0 +1,9 @@
+Optimizinig App
+- Chunking
+- Code Splitting
+- Dynamic Bundling
+- Lazy loading
+- on demand loading
+
+Custome Hooks
+{lazy, Suspense} from 'react'

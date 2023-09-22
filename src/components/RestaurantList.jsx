@@ -32,10 +32,10 @@ const RestaurantList = () => {
                         {
                             restaurants.map((restaurant) => (
                                 <li key={restaurant["info"]?.id}>
-                                    <Link to={'/restaurant/'+restaurant["info"]?.id} style={{textDecoration:'none'}}>
+                                    <Link to={'/restaurant/'+restaurant["info"]?.id} style={{textDecoration:'none', }}>
                                         <div style={{border:'1px solid black', marginBottom:'10px', padding:'5px'}}>
-                                            <h2>name: {restaurant["info"]?.name}</h2>
-                                            <p>rating:{restaurant["info"]?.avgRating}</p>
+                                            <h2>Name: {restaurant["info"]?.name}</h2>
+                                            <p>Rating: {restaurant["info"]?.avgRating}</p>
                                         </div>
                                     </Link>
                                 </li>
