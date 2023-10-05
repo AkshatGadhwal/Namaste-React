@@ -7,19 +7,20 @@ const Header = () => {
     const activeTabTitle = ActivePageTitle();
     const onlineStatus = useShowOnlineStatus();
   return (
-    <div style={{display:'flex', justifyContent:"space-between", height:"60px"}}>
-        <div><h1>{activeTabTitle}</h1></div>
-        <div style={{display: 'flex', justifyContent:"flex-end"}}> 
-            <div style={{ margin:'10px'}}>
+    <div className='flex justify-between h-14'>
+        <div><h1 className='text-4xl '>{activeTabTitle}</h1></div>
+        <div className='flex justify-end gap-4'> 
+            <div className='m-1.5 '>
                 <img src="https://www.freepnglogos.com/uploads/spotify-logo-png/spotify-icon-marilyn-scott-0.png" alt="Spotify Logo" width="45px" height="45px"/>
             </div>
-            <h3 >Status: {onlineStatus? '✅' : '⭕'}</h3>
-            <div style={{display:'flex',}}>
-                <button style={{margin: '15px', border:'none', borderRadius:'3px'}}>
-                    <Link to="/" style={{textDecoration:'none', color: 'inherit'}} >Home</Link>
+            <h3 className='mt-4'>Online: {onlineStatus? '✅' : '⭕'}</h3>
+            {/* create a toggle switch for enablinig light dark mode */}
+            <div className='flex'>
+                <button className='m-2 rounded-md   bg-green-900 px-2'>
+                    <Link to="/" className='no-underline' >Home</Link>
                 </button>
-                <button style={{margin: '15px', border:'none', borderRadius:'3px'}}>
-                    <Link to="/about" style={{textDecoration:'none', color: 'inherit'}}>About</Link>
+                <button className='m-2 rounded-md bg-green-900 px-2'>
+                    <Link to="/about" className='no-underline text-inherit'>About</Link>
                 </button>
             </div>
             <div></div>

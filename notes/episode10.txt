@@ -1,0 +1,8 @@
+what is different options for writing css in a react application:
+
+1. Styled component 
+2. scss
+3. sass 
+4. css
+
+and Tailwind css which is discussed in this episode
