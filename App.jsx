@@ -8,11 +8,13 @@ import { About } from '/src/components/About';
 import { Error } from '/src/components/Error';
 import { Restaurant } from '/src/components/Restaurant';
 import Header from '/src/components/Header';
+import { HeaderWithOnlineOfflineStatus } from './src/components/Header';
 
 const AppLayout = () => {
+    const HeaderWithOnlineOfflineStatusComponent = HeaderWithOnlineOfflineStatus(Header);
     return (
-        <div>
-            <Header/>
+        <div >
+            <HeaderWithOnlineOfflineStatusComponent/>
             <Outlet/>
         </div>
     );

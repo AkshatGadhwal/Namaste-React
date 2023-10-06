@@ -1,11 +1,15 @@
 import React, {useEffect, useState} from 'react'
 import { useParams } from 'react-router-dom'
 import { useRestaurant } from '../utils/useRestaurant';
+import { Accordion } from './Accordion';
 
 
 export const Restaurant = () => {
     const {resId} = useParams();
-    const {restaurant,loading} = useRestaurant(resId);
+    const [openIndex, setOpenIndex] = useState(null);
+    const [restaurant,loading] = useRestaurant(resId);
+
+    console.log(restaurant);
 
     if(loading){
         return <div>Loading...</div>
@@ -16,22 +20,25 @@ export const Restaurant = () => {
     const { itemCards } =
     restaurant?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card;
 
+    const categories = restaurant?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards;
+
     return (
-        <div>
-            <h2 style={{color:'blue'}}>{name}</h2>
-            <h3>{cuisines.join(', ')}</h3>
-            <h3>{costForTwoMessage}</h3>
-            <h4>Menu:</h4>
-            <ul>
-                {
-                    itemCards.map((item) => (
-                        <li key={item?.card?.info?.id}>
-                            <p>{item?.card?.info?.name} - {" Rs."}
-                            {item.card.info.price / 100 || item.card.info.defaultPrice / 100}</p>
-                        </li>
-                    ))
-                }
-            </ul>
+        <div className='justify-center text-center'>
+            <h2 className='text-3xl'>{name}</h2>
+            <p>{cuisines.join(', ') } - { costForTwoMessage}</p>
+            <div className='text-center justify-center'>
+                <ul className='md:w-10/12 sm:w-11/12 lg:w-9/12 xl:w-6/12 m-auto p-2'>
+                    {
+                        categories.map((category,index) => (
+                            category?.card?.card["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory" && (
+                                <li key={index}>
+                                    <Accordion data={category?.card?.card} show={openIndex === index} setShow={() => openIndex === index ?setOpenIndex(null) : setOpenIndex(index)}/>
+                                </li>
+                            )
+                        ))
+                    }
+                </ul>
+            </div>
         </div>
     )
 }

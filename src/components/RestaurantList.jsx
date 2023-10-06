@@ -24,17 +24,17 @@ const RestaurantList = () => {
     }
 
     return (
-        <div>
-            <h1>Restaurant List</h1>
+        <div className='dark:bg-black dark:text-white'>
+            <h1 className='text-3xl ms-4'>Restaurant List</h1>
             {
                 restaurants && restaurants.length > 0 ? (
-                    <ul>
+                    <ul className='mx-2 mt-6 w-11/12 ms-5'>
                         {
                             restaurants.map((restaurant) => (
-                                <li key={restaurant["info"]?.id}>
-                                    <Link to={'/restaurant/'+restaurant["info"]?.id} style={{textDecoration:'none', }}>
-                                        <div style={{border:'1px solid black', marginBottom:'10px', padding:'5px'}}>
-                                            <h2>Name: {restaurant["info"]?.name}</h2>
+                                <li className='h-26' key={restaurant["info"]?.id}>
+                                    <Link to={'/restaurant/'+restaurant["info"]?.id} >
+                                        <div className='border-black dark:border-gray-500   rounded-sm border-solid h-20 border-2 m-4 p-3'>
+                                            <h2 className='text-blue-600'>Name: {restaurant["info"]?.name}</h2>
                                             <p>Rating: {restaurant["info"]?.avgRating}</p>
                                         </div>
                                     </Link>
@@ -43,7 +43,7 @@ const RestaurantList = () => {
                         }
                     </ul>
                 ) : (
-                    <div>Loading...</div>
+                    <div className='dark:bg-black dark:text-white ms-8 mt-8 text-2xl justify-center align-middle items-center justify-items-center'>Loading...</div>
                 )
             }
         </div>

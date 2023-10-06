@@ -1,0 +1,2 @@
+HigherOrderComponent: Except a component and return a component, does some enhancement on the input component. It does not modify the input component.
+Lifting the State Up 
