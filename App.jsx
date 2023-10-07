@@ -9,7 +9,7 @@ import { Error } from '/src/components/Error';
 import { Restaurant } from '/src/components/Restaurant';
 import Header from '/src/components/Header';
 import { HeaderWithOnlineOfflineStatus } from './src/components/Header';
-import ChatGPT from './src/components/chatgpt';
+import ChatGPT from '/src/components/chatgpt';
 
 const AppLayout = () => {
     const HeaderWithOnlineOfflineStatusComponent = HeaderWithOnlineOfflineStatus(Header);
