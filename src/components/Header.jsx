@@ -29,6 +29,9 @@ const Header = () => {
                 <button className='m-2 rounded-md  bg-blue-800  dark:bg-green-900 px-2'>
                     <Link to="/about" className='no-underline dark:text-black text-white'>About</Link>
                 </button>
+                <button className='m-2 rounded-md  bg-blue-800  dark:bg-green-900 px-2'>
+                    <Link to="/chatgpt" className='no-underline dark:text-black text-white'>ChatGPT</Link>
+                </button>
             </div>
             <div></div>
         </div>
